@@ -1,0 +1,27 @@
+<div ng-controller="AdminNewsController as c">
+    news.view.htm
+
+    <style type="text/css">
+
+        div.novelty
+        {
+            margin: 5px;
+            padding: 5px;
+            background: yellow;
+        }
+
+    </style>
+
+    <h1>List of news</h1>
+
+    <div ng-repeat="novelty in c.novelties" class="novelty">
+        <button ng-click="c.editNovelty( novelty.id )">Edit</button>
+        <button ng-click="c.removeNovelty( novelty.id )">Remove</button>
+        <br />
+        {{ novelty.id }}<br />
+        {{ novelty.title }}<br />
+        {{ novelty.created | simpleTime }}<br />
+        {{ novelty.body }}<br />
+    </div>
+
+</div>

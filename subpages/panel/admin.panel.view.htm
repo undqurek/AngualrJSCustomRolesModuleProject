@@ -1,0 +1,10 @@
+<div ng-controller="AdminPanelController as c">
+    admin.panel.view.htm
+
+    <h1>Admin panel</h1>
+
+    <upload-form action="{{ c.uploadUrl }}" onsuccess="c.reloadList( $message )" onerror="c.showError( $message )">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload file" />
+    </upload-form>
+</div>

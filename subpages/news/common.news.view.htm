@@ -1,0 +1,24 @@
+<div ng-controller="CommonNewsController as c">
+    news.view.htm
+
+    <style type="text/css">
+
+        div.novelty
+        {
+            margin: 5px;
+            padding: 5px;
+            background: yellow;
+        }
+
+    </style>
+
+    <h1>List of news</h1>
+
+    <div ng-repeat="novelty in c.novelties" class="novelty">
+        {{ novelty.id }}<br />
+        {{ novelty.title }}<br />
+        {{ novelty.created | simpleTime }}<br />
+        {{ novelty.body }}<br />
+    </div>
+
+</div>

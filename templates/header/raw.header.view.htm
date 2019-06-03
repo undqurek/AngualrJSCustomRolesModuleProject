@@ -1,0 +1,36 @@
+<div ng-controller="RawHeaderController as c">
+    raw.header.view.htm
+
+    <style type="text/css">
+
+        form.login-form
+        {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid green;
+        }
+
+        form.login-form label
+        {
+            width: 100px;
+            float: left;
+            display: block;
+        }
+
+    </style>
+
+    <form ng-submit="c.loginUser()" class="login-form">
+        <label>Nick</label>
+        <input ng-model="c.user.nick" type="text" />
+        or 'user'
+        <br />
+        <label>Password</label>
+        <input ng-model="c.user.password" type="text" />
+        <!--<input ng-model="c.user.password" type="password" />-->
+        or 'user'
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+
+    <div ng-include="'templates/menu.view.htm'"></div>
+</div>
