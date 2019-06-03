@@ -8,7 +8,7 @@ Directives:
 directives/upload-form.js
 
 Filters:
-filters/capital-grouping.js\
+filters/capital-grouping.js
 
 Main module:
 metalsoft.module.js
